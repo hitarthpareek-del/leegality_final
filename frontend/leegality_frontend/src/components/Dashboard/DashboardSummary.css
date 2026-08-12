@@ -1,0 +1,301 @@
+
+/* =========================================================
+   DASHBOARD SUMMARY
+========================================================= */
+
+.dashboard-summary {
+  width: 100%;
+  padding: 20px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.summary-card {
+  --summary-color: #64748b;
+  --summary-light: #f5f7fa;
+  --summary-border: #e6e9ee;
+
+  position: relative;
+
+  width: 100%;
+  min-height: 112px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 1rem;
+
+  text-align: left;
+
+  background: #ffffff;
+
+  border: 1px solid var(--summary-border);
+  border-radius: 13px;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #dce1e8;
+
+  box-shadow:
+    0 8px 20px rgba(20, 30, 50, 0.07);
+}
+
+
+/* =========================================================
+   CARD COLORS
+========================================================= */
+
+.summary-blue {
+  --summary-color: #4f7cff;
+  --summary-light: #eef3ff;
+  --summary-border: #dce5ff;
+}
+
+.summary-green {
+  --summary-color: #2eaf76;
+  --summary-light: #eaf8f1;
+  --summary-border: #d5eee1;
+}
+
+.summary-red {
+  --summary-color: #e45b64;
+  --summary-light: #fff0f1;
+  --summary-border: #f5dadd;
+}
+
+.summary-amber {
+  --summary-color: #d99a28;
+  --summary-light: #fff7e7;
+  --summary-border: #f5e5bd;
+}
+
+.summary-gray {
+  --summary-color: #7a8493;
+  --summary-light: #f3f5f7;
+  --summary-border: #e3e6ea;
+}
+
+
+/* =========================================================
+   TOP ACCENT
+========================================================= */
+
+.summary-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background: var(--summary-color);
+
+  opacity: 0.75;
+
+  transition: opacity 0.2s ease;
+}
+
+.summary-card:hover::before,
+.summary-card-active::before {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.summary-card-content {
+  display: flex;
+  align-items: center;
+
+  gap: 0.75rem;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.summary-icon {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: var(--summary-light);
+  color: var(--summary-color);
+
+  font-size: 1rem;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.summary-card:hover .summary-icon {
+  transform: scale(1.05);
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.summary-details {
+  min-width: 0;
+}
+
+.summary-title {
+  margin-bottom: 2px;
+
+  color: #7b8494;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.summary-value {
+  color: #172033;
+
+  font-size: 1.45rem;
+  line-height: 1.1;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   LOADER
+========================================================= */
+
+.summary-loader {
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+}
+
+.summary-loader .spinner-border {
+  width: 18px;
+  height: 18px;
+
+  color: var(--summary-color);
+}
+
+
+/* =========================================================
+   FOOTER / STATUS
+========================================================= */
+
+.summary-status {
+  margin-top: 0.65rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  color: #9aa2af;
+
+  font-size: 0.68rem;
+  font-weight: 600;
+
+  transition: color 0.2s ease;
+}
+
+.summary-card:hover .summary-status {
+  color: var(--summary-color);
+}
+
+
+/* =========================================================
+   ACTIVE CARD
+========================================================= */
+
+.summary-card-active {
+  background: var(--summary-light);
+
+  border-color: var(--summary-border);
+
+  box-shadow:
+    0 5px 15px rgba(20, 30, 50, 0.05);
+}
+
+.summary-card-active .summary-title {
+  color: var(--summary-color);
+}
+
+.summary-card-active .summary-status {
+  color: var(--summary-color);
+}
+
+.summary-card-active .summary-icon {
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+.summary-card:focus-visible {
+  outline: 2px solid var(--summary-color);
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 767px) {
+  .summary-card {
+    min-height: 105px;
+    padding: 0.85rem;
+  }
+
+  .summary-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+
+  .summary-value {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .summary-status {
+    display: none;
+  }
+
+  .summary-card {
+    min-height: 92px;
+  }
+}

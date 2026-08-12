@@ -4,12 +4,14 @@ const router = express.Router();
 
 const verifyFirebaseToken = require("../middleware/verifyFirebaseToken");
 const requireSuperAdmin = require("../middleware/requireSuperAdmin");
+const loadCurrentUser = require("../middleware/loadCurrentUser");
 
 const userController = require("../controllers/userController");
 
 router.get(
   "/",
   verifyFirebaseToken,
+  loadCurrentUser,
   requireSuperAdmin,
   userController.getUsers
 );
@@ -17,6 +19,7 @@ router.get(
 router.post(
   "/",
   verifyFirebaseToken,
+  loadCurrentUser,
   requireSuperAdmin,
   userController.createUser
 );
@@ -24,6 +27,7 @@ router.post(
 router.put(
   "/:id",
   verifyFirebaseToken,
+  loadCurrentUser,
   requireSuperAdmin,
   userController.updateRole
 );
@@ -31,6 +35,7 @@ router.put(
 router.patch(
   "/:id/status",
   verifyFirebaseToken,
+  loadCurrentUser,
   requireSuperAdmin,
   userController.updateUserStatus
 );

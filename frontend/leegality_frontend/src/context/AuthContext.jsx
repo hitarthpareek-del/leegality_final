@@ -22,8 +22,8 @@ export default function AuthProvider({ children }) {
       if (firebaseUser) {
         try {
           const token = await firebaseUser.getIdToken();
-
-          const data = await loginWithBackend(token);
+          console.log(token)
+          const data = await loginWithBackend();
 
           setUser({
             firebaseUser,

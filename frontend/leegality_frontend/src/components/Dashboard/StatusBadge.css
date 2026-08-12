@@ -1,0 +1,45 @@
+.status-pill{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    min-width:105px;
+
+    padding:6px 14px;
+
+    border-radius:30px;
+
+    font-size:.82rem;
+
+    font-weight:600;
+}
+
+.badge-draft{
+    background:#e9ecef;
+    color:#495057;
+}
+
+.badge-sent{
+    background:#dbeafe;
+    color:#0d6efd;
+}
+
+.badge-received{
+    background:#fff3cd;
+    color:#856404;
+}
+
+.badge-signed{
+    background:#d1e7dd;
+    color:#198754;
+}
+
+.badge-completed{
+    background:#198754;
+    color:white;
+}
+
+.badge-expired{
+    background:#f8d7da;
+    color:#dc3545;
+}

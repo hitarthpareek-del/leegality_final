@@ -1,0 +1,335 @@
+/* =========================================
+   REPORT FILTERS
+========================================= */
+
+.report-filter-card {
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.filter-header-icon {
+  width: 32px;
+  height: 32px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #ecfdf3;
+  color: #198754;
+
+  font-size: 14px;
+}
+
+.filter-active-label {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  background: #ecfdf3;
+  color: #198754;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* =========================================
+   LABELS
+========================================= */
+
+.filter-label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #495057;
+}
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.report-filter-card .form-control,
+.report-filter-card .form-select {
+  border-color: #dee2e6;
+  border-radius: 7px;
+
+  font-size: 13px;
+
+  min-height: 34px;
+
+  box-shadow: none;
+}
+
+.report-filter-card .form-control:focus,
+.report-filter-card .form-select:focus {
+  border-color: #86b7fe;
+
+  box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.08);
+}
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.filter-input-group .input-group-text {
+  background: #ffffff;
+
+  border-color: #dee2e6;
+
+  color: #6c757d;
+
+  font-size: 13px;
+}
+
+.filter-input-group .form-control {
+  border-left: 0;
+}
+
+.filter-input-group .btn {
+  border-color: #dee2e6;
+}
+
+/* =========================================
+   DATE RANGE
+========================================= */
+
+.date-filter-btn {
+  min-height: 34px;
+
+  background: #ffffff;
+
+  border: 1px solid #dee2e6;
+
+  color: #495057;
+
+  font-size: 13px;
+
+  text-align: left;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.date-filter-btn:hover {
+  background: #f8f9fa;
+
+  border-color: #adb5bd;
+
+  color: #212529;
+}
+
+.date-filter-active {
+  background: #ecfdf3;
+
+  border-color: #b7e4c7;
+
+  color: #198754;
+
+  font-weight: 500;
+}
+
+.date-filter-active:hover {
+  background: #e2f7eb;
+
+  border-color: #a3d9b8;
+
+  color: #198754;
+}
+
+/* =========================================
+   DATE POPOVER
+========================================= */
+
+.date-filter-popover {
+  position: absolute;
+
+  z-index: 1050;
+
+  width: 320px;
+
+  top: calc(100% + 7px);
+  right: 0;
+
+  padding: 15px;
+
+  background: #ffffff;
+
+  border: 1px solid #e9ecef;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.10);
+
+  animation: filterDropdown 0.15s ease-out;
+}
+
+@keyframes filterDropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.filter-action-btn {
+  flex: 1;
+
+  min-height: 34px;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+}
+
+.filter-action-btn:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+.report-filter-card .btn-success {
+  background: #198754;
+
+  border-color: #198754;
+}
+
+.report-filter-card .btn-success:hover {
+  background: #157347;
+
+  border-color: #146c43;
+}
+
+/* =========================================
+   ACTIVE FILTERS
+========================================= */
+
+.active-filters {
+  border-top: 1px solid #f0f1f2;
+}
+
+.active-filter-title {
+  font-size: 12px;
+
+  font-weight: 600;
+
+  color: #6c757d;
+
+  margin-right: 2px;
+}
+
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 2px;
+
+  padding: 4px 7px 4px 9px;
+
+  border-radius: 6px;
+
+  background: #f8f9fa;
+
+  border: 1px solid #e9ecef;
+
+  color: #495057;
+
+  font-size: 11px;
+
+  font-weight: 500;
+}
+
+.filter-chip button {
+  width: 18px;
+  height: 18px;
+
+  padding: 0;
+
+  margin-left: 3px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #6c757d;
+
+  border-radius: 4px;
+
+  font-size: 14px;
+
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.filter-chip button:hover {
+  background: #e9ecef;
+
+  color: #212529;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1199px) {
+  .filter-action-btn {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+@media (max-width: 991px) {
+  .date-filter-popover {
+    left: 0;
+    right: auto;
+  }
+}
+
+@media (max-width: 575px) {
+  .report-filter-card .card-body {
+    padding: 14px !important;
+  }
+
+  .date-filter-popover {
+    width: 100%;
+
+    left: 0;
+    right: auto;
+  }
+
+  .filter-action-btn {
+    flex: 1;
+  }
+
+  .filter-active-label {
+    display: none;
+  }
+}

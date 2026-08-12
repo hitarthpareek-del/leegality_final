@@ -1,18 +1,7 @@
-const API_URL = "http://localhost:5000/api";
+import request from "./apiClient";
 
-export async function loginWithBackend(token) {
-  const response = await fetch(`${API_URL}/auth/login`, {
+export async function loginWithBackend() {
+  return await request("/auth/login", {
     method: "GET",
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
   });
-
-  const data = await response.json();
-
-  if (!response.ok) {
-    throw new Error(data.message || "Login failed");
-  }
-
-  return data;
 }

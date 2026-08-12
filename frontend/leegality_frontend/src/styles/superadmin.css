@@ -1,0 +1,312 @@
+/* =========================================
+   Super Admin - Soft UI
+   ========================================= */
+
+.page-content {
+  background: #f7f9fc;
+  min-height: calc(100vh - 80px);
+  padding-top: 24px;
+  padding-bottom: 40px;
+}
+
+/* -----------------------------------------
+   Cards
+   ----------------------------------------- */
+
+.dashboard-card {
+  border: 1px solid #edf0f5 !important;
+  border-radius: 18px !important;
+  background: #ffffff;
+  box-shadow: 0 8px 28px rgba(31, 41, 55, 0.055) !important;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.dashboard-card:hover {
+  box-shadow: 0 12px 32px rgba(31, 41, 55, 0.075) !important;
+}
+
+.dashboard-card .card-header {
+  background: #ffffff;
+  border-bottom: 1px solid #f0f2f6;
+  padding: 18px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #344054;
+}
+
+.dashboard-card .card-body {
+  padding: 22px;
+}
+
+/* -----------------------------------------
+   Form
+   ----------------------------------------- */
+
+.dashboard-card .form-label {
+  color: #475467;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.dashboard-card .form-control,
+.dashboard-card .form-select {
+  min-height: 44px;
+  border: 1px solid #e4e7ec;
+  border-radius: 11px;
+  background: #fafbfc;
+  color: #344054;
+  font-size: 14px;
+  padding: 9px 13px;
+  box-shadow: none;
+  transition: all 0.2s ease;
+}
+
+.dashboard-card .form-control::placeholder {
+  color: #98a2b3;
+}
+
+.dashboard-card .form-control:hover,
+.dashboard-card .form-select:hover {
+  border-color: #d0d5dd;
+  background: #ffffff;
+}
+
+.dashboard-card .form-control:focus,
+.dashboard-card .form-select:focus {
+  border-color: #b8c7ff;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.08);
+}
+
+/* -----------------------------------------
+   Add User Button
+   ----------------------------------------- */
+
+.dashboard-card form .btn-primary {
+  min-height: 44px;
+  border: none;
+  border-radius: 11px;
+  background: #6675e8;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 5px 14px rgba(102, 117, 232, 0.18);
+  transition: all 0.2s ease;
+}
+
+.dashboard-card form .btn-primary:hover {
+  background: #5968dc;
+  transform: translateY(-1px);
+  box-shadow: 0 7px 18px rgba(102, 117, 232, 0.22);
+}
+
+.dashboard-card form .btn-primary:active {
+  transform: translateY(0);
+}
+
+.dashboard-card form .btn-primary:disabled {
+  opacity: 0.65;
+  transform: none;
+  box-shadow: none;
+}
+
+/* -----------------------------------------
+   Search
+   ----------------------------------------- */
+
+.dashboard-card .input-group {
+  border-radius: 11px;
+  overflow: hidden;
+}
+
+.dashboard-card .input-group-text {
+  border: 1px solid #e4e7ec;
+  border-right: none;
+  background: #fafbfc;
+  color: #98a2b3;
+  padding-left: 14px;
+  padding-right: 11px;
+}
+
+.dashboard-card .input-group .form-control {
+  border-left: none;
+}
+
+.dashboard-card .input-group:focus-within .input-group-text {
+  border-color: #b8c7ff;
+  background: #ffffff;
+  color: #6675e8;
+}
+
+/* -----------------------------------------
+   User Count Badge
+   ----------------------------------------- */
+
+.dashboard-card .card-header .badge {
+  border-radius: 20px;
+  background: #eef2ff !important;
+  color: #5968dc !important;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 11px;
+}
+
+/* -----------------------------------------
+   Table
+   ----------------------------------------- */
+
+.dashboard-card .table-responsive {
+  margin: -2px 0;
+}
+
+.dashboard-card table {
+  margin-bottom: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.dashboard-card .table thead th {
+  background: #f8f9fc;
+  border-bottom: 1px solid #edf0f5;
+  color: #667085;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding: 13px 14px;
+  white-space: nowrap;
+}
+
+.dashboard-card .table tbody td {
+  border-bottom: 1px solid #f1f3f6;
+  color: #475467;
+  font-size: 13px;
+  padding: 14px;
+  vertical-align: middle;
+}
+
+.dashboard-card .table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.dashboard-card .table-hover tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+.dashboard-card .table-hover tbody tr:hover {
+  background-color: #fafbff;
+}
+
+/* -----------------------------------------
+   Role Select inside Table
+   ----------------------------------------- */
+
+.dashboard-card .table .form-select {
+  min-width: 125px;
+  min-height: 38px;
+  padding: 6px 30px 6px 10px;
+  font-size: 13px;
+  border-radius: 9px;
+  background-color: #fafbfc;
+}
+
+/* -----------------------------------------
+   Status Badge
+   ----------------------------------------- */
+
+.dashboard-card .table .badge {
+  min-width: 68px;
+  border-radius: 20px;
+  padding: 6px 10px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.dashboard-card .table .bg-success {
+  background: #e9f8f0 !important;
+  color: #16804b !important;
+}
+
+.dashboard-card .table .bg-danger {
+  background: #fff0f0 !important;
+  color: #d64545 !important;
+}
+
+/* -----------------------------------------
+   Action Buttons
+   ----------------------------------------- */
+
+.dashboard-card .table .btn {
+  min-width: 76px;
+  min-height: 34px;
+  border: none;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.dashboard-card .table .btn-danger {
+  background: #fff0f0;
+  color: #d64545;
+}
+
+.dashboard-card .table .btn-danger:hover {
+  background: #ffe3e3;
+  color: #c43d3d;
+  transform: translateY(-1px);
+}
+
+.dashboard-card .table .btn-success {
+  background: #e9f8f0;
+  color: #16804b;
+}
+
+.dashboard-card .table .btn-success:hover {
+  background: #dcf5e8;
+  color: #127443;
+  transform: translateY(-1px);
+}
+
+/* -----------------------------------------
+   Empty table state
+   ----------------------------------------- */
+
+.dashboard-card .table-empty {
+  padding: 45px 20px;
+  text-align: center;
+  color: #98a2b3;
+  font-size: 13px;
+}
+
+/* -----------------------------------------
+   Responsive
+   ----------------------------------------- */
+
+@media (max-width: 991.98px) {
+  .page-content {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .dashboard-card {
+    border-radius: 15px !important;
+  }
+
+  .dashboard-card .card-header {
+    padding: 15px 17px;
+  }
+
+  .dashboard-card .card-body {
+    padding: 17px;
+  }
+
+  .dashboard-card .table thead th,
+  .dashboard-card .table tbody td {
+    padding: 11px 10px;
+  }
+}

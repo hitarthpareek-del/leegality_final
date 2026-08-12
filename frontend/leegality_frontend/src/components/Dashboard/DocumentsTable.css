@@ -1,0 +1,191 @@
+/* ========================================================= */
+/* DOCUMENTS TABLE */
+/* ========================================================= */
+
+.documents-table-card {
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* ========================================================= */
+/* TABLE */
+/* ========================================================= */
+
+.documents-table {
+  min-width: 950px;
+  vertical-align: middle;
+}
+
+/* ========================================================= */
+/* TABLE HEADER */
+/* ========================================================= */
+
+.documents-table thead {
+  background: #f8f9fa;
+}
+
+.documents-table thead th {
+  padding: 13px 16px;
+  border-bottom: 1px solid #e9ecef;
+  color: #6c757d;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.documents-table thead th:first-child {
+  padding-left: 20px;
+}
+
+.documents-table thead th:last-child {
+  padding-right: 20px;
+}
+
+/* ========================================================= */
+/* HEADER CONTENT */
+/* ========================================================= */
+
+.table-heading {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.table-heading i {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* ========================================================= */
+/* TABLE BODY */
+/* ========================================================= */
+
+.documents-table tbody tr {
+  background: #ffffff;
+  transition:
+    background-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.documents-table tbody tr:hover {
+  background: #fafdfb;
+}
+
+.documents-table tbody td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f0f1f2;
+  color: #343a40;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.documents-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.documents-table tbody td:first-child {
+  padding-left: 20px;
+}
+
+.documents-table tbody td:last-child {
+  padding-right: 20px;
+}
+
+/* ========================================================= */
+/* INDEX */
+/* ========================================================= */
+
+.documents-index-col {
+  width: 55px;
+}
+
+.documents-table tbody td:first-child {
+  color: #8a929a;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* ========================================================= */
+/* RESPONSIVE */
+/* ========================================================= */
+
+.table-responsive {
+  scrollbar-width: thin;
+  scrollbar-color: #ced4da transparent;
+}
+
+.table-responsive::-webkit-scrollbar {
+  height: 6px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background: #ced4da;
+  border-radius: 10px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+  background: #adb5bd;
+}
+
+/* ========================================================= */
+/* EMPTY STATE */
+/* ========================================================= */
+
+.documents-empty {
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 14px;
+
+  padding: 40px 20px;
+  text-align: center;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.documents-empty-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 14px;
+
+  border-radius: 14px;
+
+  background: #f0fdf4;
+  color: #198754;
+
+  font-size: 24px;
+}
+
+.documents-empty-title {
+  margin-bottom: 5px;
+
+  color: #343a40;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.documents-empty-text {
+  margin: 0;
+
+  color: #8a929a;
+  font-size: 13px;
+}
