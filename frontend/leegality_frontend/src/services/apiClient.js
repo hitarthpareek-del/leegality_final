@@ -1,6 +1,5 @@
 import { auth } from "../firebase";
-
-const API_URL = "http://localhost:5000/api";
+import { API_URL } from "./config";
 
 async function request(endpoint, options = {}) {
   const currentUser = auth.currentUser;

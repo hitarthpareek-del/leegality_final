@@ -1,6 +1,6 @@
 import request from "./apiClient";
 import axios from "axios";
-const API_URL = "http://localhost:5000/api";
+import { API_URL } from "./config";
 
 function buildQuery(params = {}) {
   const searchParams = new URLSearchParams();

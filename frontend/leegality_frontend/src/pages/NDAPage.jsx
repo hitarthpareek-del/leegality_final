@@ -6,6 +6,7 @@ import useCompany from "../context/useCompany";
 import ToastMessage from "../components/Common/ToastMessage";
 import { getMembers } from "../services/memberService";
 import { getInvitees } from "../services/inviteeService";
+import { API_URL } from "../services/config";
 import { useRef } from "react";
 
 export default function NDAPage() {
@@ -256,7 +257,7 @@ export default function NDAPage() {
             };
 
             const response = await axios.post(
-                "http://localhost:5000/api/sign/request?type=nda",
+                `${API_URL}/sign/request?type=nda`,
                 payload,
                 {
                     headers: {
@@ -564,7 +565,7 @@ export default function NDAPage() {
                                     <SectionTitle
                                         number="04"
                                         title="Signing Parties"
-                                        rightText="Up to 4 invitees"
+                                        rightText="Up to 8 invitees"
                                     />
 
                                     <div className="row g-2">
@@ -591,7 +592,7 @@ export default function NDAPage() {
                                             </div>
                                         ))}
 
-                                        {invitees.length < 3 && (
+                                        {invitees.length < 8 && (
                                             <div className="col-md-6">
                                                 <AddInviteeCard
                                                     invitees={availableInvitees}

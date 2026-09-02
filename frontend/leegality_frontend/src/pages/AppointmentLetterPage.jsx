@@ -7,6 +7,7 @@ import ToastMessage from "../components/Common/ToastMessage";
 import { getInvitees } from "../services/inviteeService";
 import { useEffect } from "react";
 import { getMembers } from "../services/memberService";
+import { API_URL } from "../services/config";
 
 export default function AppointmentLetterPage() {
   const { user } = useAuth();
@@ -680,7 +681,7 @@ export default function AppointmentLetterPage() {
       };
 
       const response = await axios.post(
-        "http://localhost:5000/api/sign/request?type=appointment",
+        `${API_URL}/sign/request?type=appointment`,
         payload,
         {
           headers: {
@@ -1351,7 +1352,7 @@ export default function AppointmentLetterPage() {
                     <SectionTitle
                       number="07"
                       title="Signing Parties"
-                      rightText="Up to 4 invitees"
+                      rightText="Up to 8 invitees"
                     />
 
                     <div className="row g-2">
@@ -1378,7 +1379,7 @@ export default function AppointmentLetterPage() {
                         </div>
                       ))}
 
-                      {invitees.length < 3 && (
+                      {invitees.length < 7 && (
                         <div className="col-md-6">
                           <AddInviteeCard
                             invitees={availableInvitees}

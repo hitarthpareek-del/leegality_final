@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import Header from "../components/Layout/Header";
 import ToastMessage from "../components/Common/ToastMessage";
+import { API_URL } from "../services/config";
 
 export default function UserDetailsFormPage() {
 
@@ -250,7 +251,7 @@ export default function UserDetailsFormPage() {
             });
 
             const response = await axios.post(
-                "http://localhost:5000/api/members",
+                `${API_URL}/members`,
                 formData,
                 {
                     headers: {

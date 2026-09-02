@@ -60,7 +60,7 @@ export default function Header({
 
               <div className="header-logo">
                 <img
-                  src="https://www.zohowebstatic.com/sites/zweb/images/otherbrandlogos/leegality-icon.svg"
+                  src="/leegality-icon.svg"
                   alt="Leegality"
                 />
               </div>

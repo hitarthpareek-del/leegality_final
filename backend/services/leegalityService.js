@@ -1,5 +1,6 @@
 const { createLeegalityClient } = require("../utils/axiosClient");
 const axios = require("axios");
+const config = require("../config/envConfig");
 
 async function getDocuments(company, query = {}) {
   const { q, status, limit } = query;
@@ -16,7 +17,7 @@ async function getDocuments(company, query = {}) {
 
   while (true) {
     let url =
-      `${process.env.LEEGALITY_BASE_URL}/v3.0/sign/request/list?max=${pageSize}&offset=${offset}`;
+      `${config.leegalityBaseUrl}/v3.0/sign/request/list?max=${pageSize}&offset=${offset}`;
 
     if (q?.trim()) {
       url += `&q=${encodeURIComponent(q.trim())}`;
@@ -79,7 +80,7 @@ async function getDocuments(company, query = {}) {
 async function getDocumentDetails(company, documentId) {
 
   const response = await axios.get(
-    `${process.env.LEEGALITY_BASE_URL}/v3.3/document/details`,
+    `${config.leegalityBaseUrl}/v3.3/document/details`,
     {
       headers: {
         "X-Auth-Token": company.token,
@@ -99,7 +100,7 @@ async function getDocumentDetails(company, documentId) {
 async function deleteDocument(company, documentId) {
 
   const response = await axios.delete(
-    `${process.env.LEEGALITY_BASE_URL}/v3.0/sign/request`,
+    `${config.leegalityBaseUrl}/v3.0/sign/request`,
     {
       headers: {
         "X-Auth-Token": company.token,
@@ -118,7 +119,7 @@ async function deleteDocument(company, documentId) {
 async function reactivateDocument(company, documentId) {
 
   const response = await axios.post(
-    `${process.env.LEEGALITY_BASE_URL}/v3.0/sign/request/reactivate`,
+    `${config.leegalityBaseUrl}/v3.0/sign/request/reactivate`,
     {
       documentId,
       "expiryDays": 5
@@ -136,7 +137,7 @@ async function reactivateDocument(company, documentId) {
 
 async function activateInvitee(company, signUrl) {
   const response = await axios.put(
-    `${process.env.LEEGALITY_BASE_URL}/v3.1/invitation/activate`,
+    `${config.leegalityBaseUrl}/v3.1/invitation/activate`,
     {},
     {
       headers: {
@@ -155,7 +156,7 @@ async function activateInvitee(company, signUrl) {
 
 async function deleteInvitee(company, signUrl) {
   const response = await axios.delete(
-    `${process.env.LEEGALITY_BASE_URL}/v3.0/sign/request/invitation`,
+    `${config.leegalityBaseUrl}/v3.0/sign/request/invitation`,
     {
       headers: {
         "X-Auth-Token": company.token,
@@ -177,7 +178,7 @@ async function downloadDocument(
   documentDownloadType
 ) {
   const url =
-    `${process.env.LEEGALITY_BASE_URL}/v3.3/document/fetchDocument` +
+    `${config.leegalityBaseUrl}/v3.3/document/fetchDocument` +
     `?documentId=${encodeURIComponent(documentId)}` +
     `&documentDownloadType=${encodeURIComponent(documentDownloadType)}`;
 
@@ -195,7 +196,7 @@ async function downloadDocument(
 
 async function markDocumentComplete(company, documentId) {
   const response = await axios.post(
-    `${process.env.LEEGALITY_BASE_URL}/v3.0/sign/request/complete`,
+    `${config.leegalityBaseUrl}/v3.0/sign/request/complete`,
     {
       documentId,
     },
@@ -224,7 +225,7 @@ async function markDocumentComplete(company, documentId) {
   }
 
   const response = await axios.post(
-    `${process.env.LEEGALITY_BASE_URL}/v3.0/sign/request/resend`,
+    `${config.leegalityBaseUrl}/v3.0/sign/request/resend`,
     {
       signUrls,
     },
