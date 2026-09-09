@@ -62,11 +62,15 @@ app.use((req, res) => {
   res.sendFile(path.join(frontendDistPath, "index.html"));
 });
 
+module.exports = app;
+
 const PORT = config.port;
 
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Server running on port ${PORT}`);
-  console.log(`⚡ Environment: ${config.appEnv.toUpperCase()} mode`);
-  console.log(`📡 Leegality Gateway: ${config.leegalityBaseUrl}`);
-});
-
+if (require.main === module) {
+  app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Server running on port ${PORT}`);
+    console.log(`⚡ Environment: ${config.appEnv.toUpperCase()} mode`);
+    console.log(`📡 Leegality Gateway: ${config.leegalityBaseUrl}`);
+  });
+}
+

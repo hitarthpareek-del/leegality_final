@@ -1,8 +1,9 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
   "builds": [
     {
-      "src": "backend/app.js",
+      "src": "backend/server.js",
       "use": "@vercel/node"
     },
     {
@@ -16,15 +17,18 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/backend/app.js"
+      "dest": "/backend/server.js"
+    },
+    {
+      "src": "/uploads/(.*)",
+      "dest": "/backend/server.js"
+    },
+    {
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
-      "dest": "/frontend/leegality_frontend/dist/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/frontend/leegality_frontend/dist/index.html"
+      "dest": "/index.html"
     }
   ]
 }
