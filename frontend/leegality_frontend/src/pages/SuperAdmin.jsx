@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 
 import AddUserForm from "../components/UserManagement/AddUserForm";
-import SearchBar from "../components/UserManagement/Searchbar";
 import UserTable from "../components/UserManagement/UserTable";
 
 import ConfirmModal from "../components/Common/ConfirmModal";
